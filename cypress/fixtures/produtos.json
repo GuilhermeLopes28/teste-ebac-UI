@@ -1,0 +1,20 @@
+[
+    {
+        "nomeProduto" : "Cronus Yoga Pant",
+        "cor" : "Red" ,
+        "quantidade" : "4" ,
+        "tamanho" : "36"
+    },
+    {
+        "nomeProduto" : "Arcadio Gym Short",
+        "cor" : "Black" ,
+        "quantidade" : "2" ,
+        "tamanho" : "34"
+    },
+    {
+        "nomeProduto" : "Orestes Yoga Pant",
+        "cor" : "Blue" ,
+        "quantidade" : "3" ,
+        "tamanho" : "33"
+    }
+]
