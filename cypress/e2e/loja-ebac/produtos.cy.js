@@ -23,17 +23,18 @@ describe('Funcionalidade: Produtos', () => {
         let qtd = 5
         produtosPage.buscarProduto('Orestes Yoga Pant')
         produtosPage.addProdutoCarrinho('34', 'Black', qtd )
+        //nao sei o porque está dando erro sem essa linha cy.get('.button-variable-item-34').click()
+        cy.get('.single_add_to_cart_button').click()
         cy.get('.woocommerce-message').should('contain', '“Orestes Yoga Pant” foram adicionados no seu carrinho.')
     });
     it.only('deve adicionar o produto ao carrinho buscando da massa de dados', () => {  
         cy.fixture('produtos').then(dados => {
-            produtosPage.buscarProduto(dados[1].nomeProduto)
+            produtosPage.buscarProduto(dados[0].nomeProduto)
             produtosPage.addProdutoCarrinho(
-                dados[1].tamanho, 
-                dados[1].cor, 
-                dados[1].quantidade )
-            cy.get('.woocommerce-message').should('contain', dados[1].nomeProduto)
+                dados[0].tamanho, 
+                dados[0].cor, 
+                dados[0].quantidade )
+            cy.get('.woocommerce-message').should('contain', dados[0].nomeProduto)
         })
-
     });
 });
